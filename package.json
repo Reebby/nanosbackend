@@ -1,33 +1,33 @@
 {
-	"name": "nanosbackend",
-	"version": "1.0.0",
-	"description": "",
-	"main": "server.js",
-	"scripts": {
-		"start": "nodemon server.js",
-		"dev": "nodemon -r dotenv/config server.js",
-		"test": "jest --watchAll --detectOpenHandles",
-		"pre-commit": "pretty-quick --staged"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"body-parser": "^1.18.3",
-		"cors": "^2.8.5",
-		"express": "^4.16.4",
-		"helmet": "^3.15.0",
-		"husky": "^4.2.3",
-		"mongodb": "^3.1.13",
-		"pretty-quick": "^2.0.1",
-		"swagger-jsdoc": "^3.5.0",
-		"swagger-ui-express": "^4.1.3"
-	},
-	"devDependencies": {
-		"dotenv": "^8.2.0",
-		"jest": "^25.1.0",
-		"nodemon": "^2.0.2",
-		"prettier": "1.19.1",
-		"supertest": "^4.0.2"
-	}
-	  
+  "name": "nanosbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "nodemon -r dotenv/config server.js",
+    "test": "jest --watchAll --detectOpenHandles",
+    "precommit": "npm run pretty-quck",
+    "pretty-quick": "pretty-quick"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "husky": "^4.2.3",
+    "mongodb": "^3.1.13",
+    "pretty-quick": "^2.0.1",
+    "swagger-jsdoc": "^3.5.0",
+    "swagger-ui-express": "^4.1.3"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "1.19.1",
+    "supertest": "^4.0.2"
+  }
 }
