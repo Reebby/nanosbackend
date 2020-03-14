@@ -7,7 +7,7 @@
     "start": "nodemon server.js",
     "dev": "nodemon -r dotenv/config server.js",
     "test": "jest --watchAll --detectOpenHandles",
-    "precommit": "npm run pretty-quck",
+    "pre-commit": "npm run pretty-quck",
     "pretty-quick": "pretty-quick"
   },
   "author": "",
