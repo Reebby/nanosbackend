@@ -11,7 +11,7 @@ const router = express.Router();
  *     description: This api end point fetches a campaign by the provided campaignID.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an object of data and message.
  */
 
 router
@@ -26,7 +26,7 @@ router
  *     description: This api end point fetches campaigns by the provided status e.g "Pending", "Rejected", "Delivering".
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an array of object of campaigns.
  */
 
 router
@@ -41,7 +41,7 @@ router
  *     description: This api end point fetches ad groups of a particular campaign using the provided campaignID.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an array of object of campaigns.
  */
 
 router
@@ -56,7 +56,7 @@ router
  *     description: This api end point fetches ads of a particular campaign by the provided campaignID.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an array of object of ads.
  */
 
 router
@@ -71,7 +71,7 @@ router
  *     description: This api end point fetches statistics of ad for a particular date range.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an array of object of ad stats.
  */
 
 router
@@ -86,8 +86,7 @@ router
  *     description: This api end point updates a campaign using the provided campaignID.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
- *         example: {hdhdgd}
+ *         description: Receive back an object of the updated campaign.
  */
 
 router
@@ -102,7 +101,7 @@ router
  *     description: This api end point updates an adgroup using the provided adGroupID.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an object of the updated adgroup.
  */
 
 router
@@ -117,7 +116,7 @@ router
  *     description: This api end point updates an ad using the provided adGroupID.
  *     responses:
  *       200:
- *         description: Receive back flavor and flavor Id.
+ *         description: Receive back an object of the updated ad.
  */
 
 router.route("/api/update/ad/:adID").put(collectionCtrl.updateAd);
