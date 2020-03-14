@@ -3,29 +3,6 @@ const collectionCtrl = require('../controllers/collection.controller');
 
 const router = express.Router();
 
-// /**
-//  * ?/*@swagger*
-//  * /ice-cream:
-//  *   get:
-//  *     tags:
-//  *       — Ice Cream
-//  *     summary: This should create a new ice cream.
-//  *     description: This is where you can give some background as to why this route is being created or perhaps reference a ticket number.
-//  *     consumes:
-//  *       — application/json
-//  *     parameters:
-//  *       — name: body
-//  *       in: body
-//  *       schema:
-//  *         type: object
-//  *         properties:
-//  *           flavor:
-//  *           type: string
-//  *     responses:
-//  *       200:
-//  *         description: Receive back flavor and flavor Id.
-//  */
-
 /**
  * @swagger
  * /api/campaigns/:campaignID:
@@ -33,8 +10,7 @@ const router = express.Router();
  *     description: This api end point fetches a campaign by the provided campaignID.
  *     responses:
  *       200:
- *         description: {
- * }
+ *         description: Receive back flavor and flavor Id.
  */
 
 router.route('/api/campaigns/:campaignID').get(collectionCtrl.fetchCampaignsByID);
