@@ -7,7 +7,7 @@
 		"start": "nodemon server.js",
 		"dev": "nodemon -r dotenv/config server.js",
 		"test": "jest --watchAll --detectOpenHandles",
-		"precommit": "echo hello"
+		"pre-commit": "echo hello"
 	},
 	"author": "",
 	"license": "ISC",
