@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "nodemon server.js",
 		"dev": "nodemon -r dotenv/config server.js",
-		"test": "jest --watchAll --detectOpenHandles"
+		"test": "jest --watchAll --detectOpenHandles",
+		"precommit": "echo hello"
 	},
 	"author": "",
 	"license": "ISC",
@@ -27,10 +28,6 @@
 		"nodemon": "^2.0.2",
 		"prettier": "1.19.1",
 		"supertest": "^4.0.2"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged"
-		}
 	}
+
 }
