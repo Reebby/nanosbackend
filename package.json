@@ -4,10 +4,11 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
+		"precommit": "pretty-quick --staged",
 		"start": "nodemon server.js",
 		"dev": "nodemon -r dotenv/config server.js",
-		"test": "jest --watchAll --detectOpenHandles",
-		"precommit": "pretty-quick --staged"
+		"test": "jest --watchAll --detectOpenHandles"
+
 	},
 	"author": "",
 	"license": "ISC",
