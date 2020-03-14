@@ -1,104 +1,125 @@
-const express = require('express');
-const collectionCtrl = require('../controllers/collection.controller');
+const express = require("express");
+const collectionCtrl = require("../controllers/collection.controller");
 
 const router = express.Router();
 
 /**
  * @swagger
- * /api/campaigns/:campaignID:
+ * /api/campaign/:campaignID:
  *   get:
- *     summary: Fetch campaign by Id
+ *     summary: Fetch campaign by campaign Id
  *     description: This api end point fetches a campaign by the provided campaignID.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/campaigns/:campaignID').get(collectionCtrl.fetchCampaignsByID);
+router
+  .route("/api/campaign/:campaignID")
+  .get(collectionCtrl.fetchCampaignsByID);
 
 /**
  * @swagger
- * /api/campaigns/status/:status:
+ * /api/campaign/status/:status:
  *   get:
- *     summary: fetch campaign by status
- *     description: This api end point fetches a campaign by its status e.g "Pending", "Rejected", "Delivering".
+ *     summary: Fetch campaign by status
+ *     description: This api end point fetches campaigns by the provided status e.g "Pending", "Rejected", "Delivering".
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/campaigns/status/:status').get(collectionCtrl.fetchCampaignsByStatus);
+router
+  .route("/api/campaign/status/:status")
+  .get(collectionCtrl.fetchCampaignsByStatus);
 
 /**
  * @swagger
  * /api/campaign/adgroups/:campaignID:
  *   get:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: Fetch ad groups by campaign Id
+ *     description: This api end point fetches ad groups of a particular campaign using the provided campaignID.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/campaign/adgroups/:campaignID').get(collectionCtrl.fetchAdGroupsByCampaignID);
+router
+  .route("/api/campaign/adgroups/:campaignID")
+  .get(collectionCtrl.fetchAdGroupsByCampaignID);
 
 /**
  * @swagger
  * /api/campaign/ads/:campaignID:
  *   get:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: Fetch ads by campaign Id
+ *     description: This api end point fetches ads of a particular campaign by the provided campaignID.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/campaign/ads/:campaignID').get(collectionCtrl.fetchAdsByCampaignID);
+router
+  .route("/api/campaign/ads/:campaignID")
+  .get(collectionCtrl.fetchAdsByCampaignID);
 
 /**
  * @swagger
- * /api/ads/:adID/:startdate/:enddate:
+ * /api/adstats/:adID/:startdate/:enddate:
  *   get:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: Fetch statistics of ads using date range
+ *     description: This api end point fetches statistics of ad for a particular date range.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/ads/:adID/:startdate/:enddate').get(collectionCtrl.fetchAdStatsByDateRange);
+router
+  .route("/api/adstats/:adID/:startdate/:enddate")
+  .get(collectionCtrl.fetchAdStatsByDateRange);
 
 /**
  * @swagger
  * /api/update/campaign/:campaignID:
  *   put:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: Update a campaign
+ *     description: This api end point updates a campaign using the provided campaignID.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
+ *         example: {hdhdgd}
  */
 
-router.route('/api/update/campaign/:campaignID').put(collectionCtrl.updateCampaign);
+router
+  .route("/api/update/campaign/:campaignID")
+  .put(collectionCtrl.updateCampaign);
 
 /**
  * @swagger
  * /api/update/adgroup/:adGroupID:
  *   put:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: Update an adGroup
+ *     description: This api end point updates an adgroup using the provided adGroupID.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/update/adgroup/:adGroupID').put(collectionCtrl.updateAdGroup);
+router
+  .route("/api/update/adgroup/:adGroupID")
+  .put(collectionCtrl.updateAdGroup);
 
 /**
  * @swagger
  * /api/update/ad/:adID:
  *   put:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: Update an ad
+ *     description: This api end point updates an ad using the provided adGroupID.
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
  */
 
-router.route('/api/update/ad/:adID').put(collectionCtrl.updateAd);
+router.route("/api/update/ad/:adID").put(collectionCtrl.updateAd);
 
 module.exports = router;
