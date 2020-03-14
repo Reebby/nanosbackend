@@ -15,7 +15,7 @@
 
 ## Available Scripts To Run this code using NPM
 
-Clone this repository [git clone repo-link]
+Clone this repository [git clone https://github.com/Reebby/nanosbackend.git]
 
 In the project directory, you can run:
 
@@ -25,7 +25,7 @@ To Install dependencies needed to run this project.<br />
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+This Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits due to the use of nodemon (https://www.npmjs.com/package/nodemon) .<br />
@@ -76,7 +76,7 @@ and a cluster/database. This blog explains how to do so in details (https://code
 
 
 **Take note of the connection string you get after setting up your mongodb account<br />
- e.g mongodb+srv://<USERNAME>:<PASSWORD>@cluster0-1q7ty.mongodb.net/<DBNAME>**
+ e.g mongodb+srv://USERNAME:PASSWORD@cluster0-1q7ty.mongodb.net/DBNAME**
 
 
 Now you'll need to upload the json files in our local data folder to the mongodb database that you have created. <br />
@@ -94,7 +94,7 @@ You can do this by following these steps and commands:
 4. mongoimport --db dbName --collection data_stats --file data_stats.json --jsonArray
 
 
-Create a .env file and set MONGODB_URI = mongodb+srv://<USERNAME>:<PASSWORD>@cluster0-1q7ty.mongodb.net/<DBNAME>
+Create a .env file and set MONGODB_URI = mongodb+srv://USERNAME:PASSWORD@cluster0-1q7ty.mongodb.net/DBNAME
 
 to have access to the database in this project.
 
