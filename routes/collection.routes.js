@@ -7,6 +7,7 @@ const router = express.Router();
  * @swagger
  * /api/campaigns/:campaignID:
  *   get:
+ *     summary: Fetch campaign by Id
  *     description: This api end point fetches a campaign by the provided campaignID.
  *     responses:
  *       200:
@@ -19,7 +20,8 @@ router.route('/api/campaigns/:campaignID').get(collectionCtrl.fetchCampaignsByID
  * @swagger
  * /api/campaigns/status/:status:
  *   get:
- *     description: This api end point fetches a campaign by the provided campaignID.
+ *     summary: fetch campaign by status
+ *     description: This api end point fetches a campaign by its status e.g "Pending", "Rejected", "Delivering".
  *     responses:
  *       200:
  *         description: Receive back flavor and flavor Id.
